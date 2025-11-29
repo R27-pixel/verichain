@@ -65,6 +65,51 @@ export type Database = {
         }
         Relationships: []
       }
+      universities: {
+        Row: {
+          id: string
+          legal_name: string
+          type: 'CENTRAL' | 'STATE' | 'PRIVATE' | 'DEEMED'
+          state: string
+          ugc_reference: string | null
+          aishe_code: string | null
+          website_domain: string
+          registrar_official_email: string
+          wallet_address: string
+          verification_status: 'PENDING' | 'APPROVED' | 'REJECTED'
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          legal_name: string
+          type: 'CENTRAL' | 'STATE' | 'PRIVATE' | 'DEEMED'
+          state: string
+          ugc_reference?: string | null
+          aishe_code?: string | null
+          website_domain: string
+          registrar_official_email: string
+          wallet_address: string
+          verification_status?: 'PENDING' | 'APPROVED' | 'REJECTED'
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          legal_name?: string
+          type?: 'CENTRAL' | 'STATE' | 'PRIVATE' | 'DEEMED'
+          state?: string
+          ugc_reference?: string | null
+          aishe_code?: string | null
+          website_domain?: string
+          registrar_official_email?: string
+          wallet_address?: string
+          verification_status?: 'PENDING' | 'APPROVED' | 'REJECTED'
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

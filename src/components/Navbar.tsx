@@ -13,6 +13,13 @@ export function Navbar() {
           
           <div className="flex items-center space-x-6">
             <NavLink 
+              to="/university/register" 
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              activeClassName="text-primary"
+            >
+              Register University
+            </NavLink>
+            <NavLink 
               to="/admin" 
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               activeClassName="text-primary"
